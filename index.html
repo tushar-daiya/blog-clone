@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js -->
+  </head>
+  <body>
+    <div class="mobilenav-overlay">
+      <div class="close">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-x"
+        >
+          <path d="M18 6 6 18" />
+          <path d="m6 6 12 12" />
+        </svg>
+      </div>
+      <ul class="nav-overlay">
+        <li>Home</li>
+        <li>About</li>
+        <li>My Blog</li>
+        <li>Contact</li>
+        <li>
+          <div class="socials">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-facebook"
+            >
+              <path
+                d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-twitter"
+            >
+              <path
+                d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-instagram"
+            >
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+            </svg>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="mobile-nav">
+      <div class="searchBox-mobile">
+        <input type="text" placeholder="Search" /><svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#000000"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-search"
+        >
+          <circle cx="11" cy="11" r="8" />
+          <path d="m21 21-4.3-4.3" />
+        </svg>
+      </div>
+      <div class="menu">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#000000"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-menu"
+        >
+          <line x1="4" x2="20" y1="12" y2="12" />
+          <line x1="4" x2="20" y1="6" y2="6" />
+          <line x1="4" x2="20" y1="18" y2="18" />
+        </svg>
+      </div>
+    </div>
+
+    <div class="header">
+      <h4>
+        <span>EVERYTHING IS PERSONAL.</span><span> INCLUDING THIS BLOG</span>
+      </h4>
+      <h1>Train of Thoughts</h1>
+    </div>
+    <div class="navbar">
+      <ul class="navItems">
+        <li class="navItem">Home</li>
+        <li class="navItem">About</li>
+        <li class="navItem">My Blog</li>
+        <li class="navItem">Contact</li>
+        <li class="navItem">
+          <div class="searchBox">
+            <input type="text" placeholder="Search" /><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-search"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.3-4.3" />
+            </svg>
+          </div>
+        </li>
+        <li class="navItem">
+          <div class="socials">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-facebook"
+            >
+              <path
+                d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-twitter"
+            >
+              <path
+                d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-instagram"
+            >
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+            </svg>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="mainPost">
+      <div class="blogTag">FEATURED POST</div>
+      <img
+        src="https://static.wixstatic.com/media/c22c23_89024a2cd2e943a6b89d99404958e3bb~mv2.jpg/v1/fill/w_1175,h_661,fp_0.50_0.50,q_90,enc_auto/c22c23_89024a2cd2e943a6b89d99404958e3bb~mv2.jpg"
+        alt=""
+      />
+      <div class="details">
+        <div class="timeDetails">
+          <span class="postDate">14 Jul</span>
+          <span class="dot"></span><span class="postReadTime">5 min</span>
+        </div>
+        <div class="title_desc">
+          <h4 class="blogTitle">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </h4>
+          <p class="desc">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem
+            nihil itaque totam iusto saepe maiores ab blanditiis. Culpa non nam
+            quam odio tempora nihil mollitia?
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="subscribe">
+      <div class="subscribe-inner">
+        <h4 class="subscribeHeading">Never Miss a new Post.</h4>
+        <div>
+          <label for="email">Enter email</label>
+          <input type="text" />
+        </div>
+        <button>Subscribe</button>
+      </div>
+    </div>
+    <div class="second-container">
+      <div class="posts">
+        <div class="postContainer">
+          <h3>TRAIN OF THOUGHT</h3>
+          <div class="post">
+            <img
+              src="https://static.wixstatic.com/media/c22c23_e3b5cb121db549fdbb1590f51d378b8c~mv2.png/v1/fill/w_331,h_443,fp_0.50_0.50,q_95,enc_auto/c22c23_e3b5cb121db549fdbb1590f51d378b8c~mv2.png"
+              alt=""
+            />
+            <div class="details">
+              <div class="timeDetails">
+                <span class="postDate">14 Jul</span>
+                <span class="dot"></span><span class="postReadTime">5 min</span>
+              </div>
+              <div class="title_desc">
+                <h4 class="blogTitle">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </h4>
+                <p class="desc">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Voluptatem nihil itaque totam iusto saepe maiores ab
+                  blanditiis. Culpa non nam quam odio tempora nihil mollitia....
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="post">
+            <img
+              src="https://static.wixstatic.com/media/c22c23_e3b5cb121db549fdbb1590f51d378b8c~mv2.png/v1/fill/w_331,h_443,fp_0.50_0.50,q_95,enc_auto/c22c23_e3b5cb121db549fdbb1590f51d378b8c~mv2.png"
+              alt=""
+            />
+            <div class="details">
+              <div class="timeDetails">
+                <span class="postDate">14 Jul</span>
+                <span class="dot"></span><span class="postReadTime">5 min</span>
+              </div>
+              <div class="title_desc">
+                <h4 class="blogTitle">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </h4>
+                <p class="desc">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Voluptatem nihil itaque totam iusto saepe maiores ab
+                  blanditiis. Culpa non nam quam odio tempora nihil mollitia....
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="post">
+            <img
+              src="https://static.wixstatic.com/media/c22c23_e3b5cb121db549fdbb1590f51d378b8c~mv2.png/v1/fill/w_331,h_443,fp_0.50_0.50,q_95,enc_auto/c22c23_e3b5cb121db549fdbb1590f51d378b8c~mv2.png"
+              alt=""
+            />
+            <div class="details">
+              <div class="timeDetails">
+                <span class="postDate">14 Jul</span>
+                <span class="dot"></span><span class="postReadTime">5 min</span>
+              </div>
+              <div class="title_desc">
+                <h4 class="blogTitle">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </h4>
+                <p class="desc">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Voluptatem nihil itaque totam iusto saepe maiores ab
+                  blanditiis. Culpa non nam quam odio tempora nihil mollitia....
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="post">
+            <img
+              src="https://static.wixstatic.com/media/c22c23_e3b5cb121db549fdbb1590f51d378b8c~mv2.png/v1/fill/w_331,h_443,fp_0.50_0.50,q_95,enc_auto/c22c23_e3b5cb121db549fdbb1590f51d378b8c~mv2.png"
+              alt=""
+            />
+            <div class="details">
+              <div class="timeDetails">
+                <span class="postDate">14 Jul</span>
+                <span class="dot"></span><span class="postReadTime">5 min</span>
+              </div>
+              <div class="title_desc">
+                <h4 class="blogTitle">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </h4>
+                <p class="desc">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Voluptatem nihil itaque totam iusto saepe maiores ab
+                  blanditiis. Culpa non nam quam odio tempora nihil mollitia....
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="post">
+            <img
+              src="https://static.wixstatic.com/media/c22c23_e3b5cb121db549fdbb1590f51d378b8c~mv2.png/v1/fill/w_331,h_443,fp_0.50_0.50,q_95,enc_auto/c22c23_e3b5cb121db549fdbb1590f51d378b8c~mv2.png"
+              alt=""
+            />
+            <div class="details">
+              <div class="timeDetails">
+                <span class="postDate">14 Jul</span>
+                <span class="dot"></span><span class="postReadTime">5 min</span>
+              </div>
+              <div class="title_desc">
+                <h4 class="blogTitle">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </h4>
+                <p class="desc">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Voluptatem nihil itaque totam iusto saepe maiores ab
+                  blanditiis. Culpa non nam quam odio tempora nihil mollitia....
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="post">
+            <img
+              src="https://static.wixstatic.com/media/c22c23_e3b5cb121db549fdbb1590f51d378b8c~mv2.png/v1/fill/w_331,h_443,fp_0.50_0.50,q_95,enc_auto/c22c23_e3b5cb121db549fdbb1590f51d378b8c~mv2.png"
+              alt=""
+            />
+            <div class="details">
+              <div class="timeDetails">
+                <span class="postDate">14 Jul</span>
+                <span class="dot"></span><span class="postReadTime">5 min</span>
+              </div>
+              <div class="title_desc">
+                <h4 class="blogTitle">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </h4>
+                <p class="desc">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Voluptatem nihil itaque totam iusto saepe maiores ab
+                  blanditiis. Culpa non nam quam odio tempora nihil mollitia....
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <button class="morePosts">More Posts</button>
+        </div>
+      </div>
+      <div class="sidebar">
+        <div class="sidebarcontainer">
+          <div class="aboutMe">
+            <h3>ABOUT ME</h3>
+            <img
+              src="https://static.wixstatic.com/media/c22c23_97d2c6c58ccd4969a250c18f8b079b3d~mv2_d_1959_1212_s_2.png/v1/crop/x_60,y_0,w_1713,h_1212/fill/w_355,h_250,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/portrait%20eliza.png"
+              alt=""
+            />
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam
+              nam aliquid quod at omnis maiores earum laudantium, nihil corrupti
+              repudiandae, sequi dolorem iusto illum. Incidunt quia at est
+              voluptatem ex.
+            </p>
+            <p class="readMore">Read More ></p>
+          </div>
+          <div class="followMe">
+            <h3>FOLLOW ME</h3>
+            <div class="imageContainer">
+              <img
+                src="https://static.wixstatic.com/media/c22c23_e3b5cb121db549fdbb1590f51d378b8c~mv2.png/v1/fill/w_331,h_443,fp_0.50_0.50,q_95,enc_auto/c22c23_e3b5cb121db549fdbb1590f51d378b8c~mv2.png"
+                alt=""
+              />
+              <img
+                src="https://static.wixstatic.com/media/c22c23_e3b5cb121db549fdbb1590f51d378b8c~mv2.png/v1/fill/w_331,h_443,fp_0.50_0.50,q_95,enc_auto/c22c23_e3b5cb121db549fdbb1590f51d378b8c~mv2.png"
+                alt=""
+              />
+              <img
+                src="https://static.wixstatic.com/media/c22c23_e3b5cb121db549fdbb1590f51d378b8c~mv2.png/v1/fill/w_331,h_443,fp_0.50_0.50,q_95,enc_auto/c22c23_e3b5cb121db549fdbb1590f51d378b8c~mv2.png"
+                alt=""
+              />
+              <img
+                src="https://static.wixstatic.com/media/c22c23_e3b5cb121db549fdbb1590f51d378b8c~mv2.png/v1/fill/w_331,h_443,fp_0.50_0.50,q_95,enc_auto/c22c23_e3b5cb121db549fdbb1590f51d378b8c~mv2.png"
+                alt=""
+              />
+              <img
+                src="https://static.wixstatic.com/media/c22c23_e3b5cb121db549fdbb1590f51d378b8c~mv2.png/v1/fill/w_331,h_443,fp_0.50_0.50,q_95,enc_auto/c22c23_e3b5cb121db549fdbb1590f51d378b8c~mv2.png"
+                alt=""
+              />
+              <img
+                src="https://static.wixstatic.com/media/c22c23_e3b5cb121db549fdbb1590f51d378b8c~mv2.png/v1/fill/w_331,h_443,fp_0.50_0.50,q_95,enc_auto/c22c23_e3b5cb121db549fdbb1590f51d378b8c~mv2.png"
+                alt=""
+              />
+              <img
+                src="https://static.wixstatic.com/media/c22c23_e3b5cb121db549fdbb1590f51d378b8c~mv2.png/v1/fill/w_331,h_443,fp_0.50_0.50,q_95,enc_auto/c22c23_e3b5cb121db549fdbb1590f51d378b8c~mv2.png"
+                alt=""
+              />
+              <img
+                src="https://static.wixstatic.com/media/c22c23_e3b5cb121db549fdbb1590f51d378b8c~mv2.png/v1/fill/w_331,h_443,fp_0.50_0.50,q_95,enc_auto/c22c23_e3b5cb121db549fdbb1590f51d378b8c~mv2.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="socials">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="36"
+              height="36"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-facebook"
+            >
+              <path
+                d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="36"
+              height="36"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-twitter"
+            >
+              <path
+                d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="36"
+              height="36"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-instagram"
+            >
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+            </svg>
+          </div>
+          <div class="subscribe-sidebar">
+            <h3>SUBSCRIBE</h3>
+            <label for="email">Enter your email</label>
+            <input type="text" name="email" id="email" />
+            <button>Subscribe</button>
+          </div>
+          <div class="pickOfMonth">
+            <h3>MY PICK</h3>
+            <h3>OF THE MONTH</h3>
+            <img
+              src="https://static.wixstatic.com/media/84770f_0129bae0812d4987bc00dd154323a2c5~mv2_d_1920_2880_s_2.jpg/v1/crop/x_46,y_1049,w_1874,h_1246/fill/w_355,h_235,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/books%20new%20smaller.jpg"
+              alt=""
+            />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+              molestiae aspernatur quidem saepe officiis consequuntur omnis quam
+              ab quae distinctio consequatur ullam tempore asperiores,
+              recusandae perspiciatis, ea, soluta molestias? Sunt!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact">
+      <div class="contactContainer">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="60"
+          height="60"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="0.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-move-up"
+        >
+          <path d="M8 6L12 2L16 6" />
+          <path d="M12 2V22" />
+        </svg>
+        <h2>Drop Me a Line, Let Me Know What You Think</h2>
+        <div class="contactform">
+          <div class="name">
+            <div class="firstName input-div">
+              <label for="firstName-label">First Name</label>
+              <input type="text" />
+            </div>
+            <div class="lastName input-div">
+              <label for="lastName-label">Last Name</label>
+              <input type="text" />
+            </div>
+          </div>
+          <div class="email input-div">
+            <label for="email-label">Email</label>
+            <input type="text" />
+          </div>
+          <div class="message input-div">
+            <label for="message-label">Message</label>
+            <textarea name="message" id="message-area" rows="4"></textarea>
+          </div>
+          <button>Submit</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>© 2023 Made by Tushar</p>
+    </div>
+    <script>
+      const closeBtn = document.querySelector(".close");
+      const menuBtn = document.querySelector(".menu");
+      const mobileSection = document.querySelector(".mobilenav-overlay");
+      menuBtn.addEventListener("click", () => {
+        mobileSection.style.width = "100%";
+      });
+      closeBtn.addEventListener("click", () => {
+        mobileSection.style.width = "0%";
+      });
+      gsap.fromTo(".navItems", { x: -200 }, { x: 0, duration: 1 });
+      gsap.fromTo(".header h4", { x: -200 }, { x: 0, duration: 1 });
+      gsap.fromTo(".header h1", { x: 200 }, { x: 0, duration: 1 });
+      gsap.fromTo(".mainPost .blogTag", { x: -200 }, { x: 0, duration: 1 });
+      const posts = document.querySelectorAll(".post");
+      console.log(posts);
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target);
+          }
+        });
+      });
+
+      posts.forEach((post) => observer.observe(post));
+    </script>
+  </body>
+</html>

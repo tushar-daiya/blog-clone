@@ -1,0 +1,658 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+:root {
+  --size1: 14px;
+  --size2: 18px;
+  --size3: 24px;
+  --size4: 28px;
+  --size5: 36px;
+  --size6: 100px;
+  --spacing1: 12px;
+  --spacing2: 10px;
+  --spacing3: 8px;
+  --color1: #4c90b1;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html,body{
+  overflow-x: hidden;
+}
+.mobilenav-overlay {
+  width: 0%;
+  height: 100dvh;
+  background-color: white;
+  overflow-x: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: width 0.3s;
+}
+.mobilenav-overlay .close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.mobilenav-overlay ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 20px;
+}
+
+.mobilenav-overlay ul li {
+  list-style: none;
+}
+.mobilenav-overlay ul li div > svg {
+  margin: 0 5px;
+}
+.mobile-nav {
+  display: none;
+  border-bottom: 2px solid black;
+}
+.mobile-nav .menu {
+  padding: 10px 20px;
+}
+.searchBox-mobile {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-right: 1px solid black;
+}
+.searchBox-mobile input {
+  outline: none;
+  width: 100%;
+  border: none;
+}
+button {
+  cursor: pointer;
+}
+.header {
+  max-width: 1080px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.header h4 {
+  font-weight: 400;
+  letter-spacing: var(--spacing1);
+  font-size: var(--size3);
+  margin-bottom: 20px;
+}
+.header h1 {
+  font-size: var(--size6);
+  letter-spacing: var(--spacing2);
+}
+.navbar {
+  border-top: 1px solid black;
+  /* height: 48px; */
+  margin: 0 20px;
+  border-bottom: 1px solid black;
+}
+.navbar .navItems {
+  list-style: none;
+  display: flex;
+  max-width: 1080px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .navItems:nth-child(1) {
+  border-left: 1px solid black;
+}
+.navbar .navItems .navItem {
+  border-right: 1px solid black;
+  flex-grow: 1;
+  flex-basis: 0;
+  text-align: center;
+  line-height: 50px;
+  font-size: var(--size1);
+  cursor: pointer;
+}
+.navbar .navItems .navItem:hover {
+  color: var(--color1);
+  font-weight: 500;
+}
+.navbar .navItems .navItem .searchBox {
+  display: flex;
+  gap: 10px;
+  margin: 5px 10px;
+  height: 40px;
+  align-items: center;
+}
+.navbar .navItems .navItem .searchBox input {
+  outline: none;
+  border: none;
+  margin-left: 5px;
+}
+.navbar .navItems .navItem .searchBox:hover {
+  border-bottom: 1px solid black;
+}
+.navbar .navItems .navItem .socials {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  height: 50px;
+  align-items: center;
+}
+
+.mainPost {
+  max-width: 960px;
+  margin: 80px auto;
+  border: 1px solid black;
+  position: relative;
+  cursor: pointer;
+}
+.mainPost .blogTag {
+  font-size: var(--size3);
+  letter-spacing: var(--spacing1);
+  display: inline-block;
+  border: 1px solid black;
+  padding: 10px 20px;
+  position: absolute;
+  height: 60px;
+  top: -30px;
+  left: -1px;
+  background-color: white;
+}
+.mainPost img {
+  width: 100%;
+}
+
+.mainPost .details {
+  padding: 30px;
+}
+.mainPost .details .timeDetails {
+  font-size: var(--size1);
+}
+.dot {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: black;
+}
+.timeDetails {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.mainPost .details .blogTitle {
+  font-size: var(--size4);
+  margin: 15px 0;
+}
+.mainPost .details .desc {
+  font-weight: 300;
+}
+.mainPost .details .title_desc:hover {
+  color: var(--color1);
+}
+.subscribe {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.subscribe {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin-bottom: 40px;
+}
+.subscribe .subscribe-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.subscribe div h4 {
+  font-size: var(--size5);
+}
+.subscribe .subscribe-inner div label {
+  display: block;
+  font-size: var(--size2);
+  font-weight: 300;
+}
+.subscribe .subscribe-inner div input {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid black;
+  padding: 10px 0;
+  width: 300px;
+}
+.subscribe .subscribe-inner div input:focus {
+  border-bottom: 2px solid rgb(239, 106, 128);
+}
+.subscribe .subscribe-inner button {
+  padding: 10px 30px;
+  font-size: var(--size2);
+  background-color: white;
+  border: 1px solid black;
+  transition: background-color 0.3s ease-in-out;
+}
+.subscribe .subscribe-inner button:hover {
+  background-color: black;
+  color: white;
+}
+
+.second-container {
+  display: flex;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.second-container .posts {
+  flex-grow: 2;
+
+  padding: 40px 20px;
+  border-right: 1px solid black;
+}
+.second-container .sidebar {
+  padding: 40px 0;
+  flex-grow: 1;
+}
+
+.second-container .posts .postContainer h3 {
+  font-size: var(--size4);
+  letter-spacing: var(--spacing3);
+  font-weight: 300;
+}
+.second-container .posts .postContainer {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.second-container .posts .postContainer .post {
+  border: 1px solid black;
+  height: 350px;
+  display: flex;
+  margin: 40px 0;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.second-container .posts .postContainer .post.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.second-container .posts .postContainer .post img {
+  width: 50%;
+  height: 100%;
+}
+.second-container .posts .postContainer .post .details {
+  padding: 20px;
+}
+.second-container .posts .postContainer .post .details .timeDetails {
+  font-size: var(--size1);
+  font-weight: 300;
+}
+
+.second-container .posts .postContainer .post .details .title_desc .blogTitle {
+  font-size: var(--size2);
+  margin: 20px 0;
+}
+.second-container .posts .postContainer .post .details .title_desc .desc {
+  font-size: var(--size1);
+  font-weight: 300;
+  line-height: 30px;
+}
+
+.second-container .posts .postContainer button.morePosts {
+  margin: 0 auto;
+  padding: 10px 40px;
+  background-color: white;
+}
+.second-container .sidebar .sidebarcontainer {
+  max-width: 300px;
+  width: 100%;
+  margin: 0 auto;
+}
+.second-container .sidebar .sidebarcontainer .aboutMe {
+  padding-bottom: 40px;
+  border-bottom: 1px solid black;
+}
+.second-container .sidebar .sidebarcontainer .aboutMe h3 {
+  font-size: var(--size4);
+  letter-spacing: var(--spacing3);
+  font-weight: 300;
+}
+.second-container .sidebar .sidebarcontainer .aboutMe img {
+  width: 100%;
+  margin: 40px 0;
+  border: 1px solid black;
+}
+
+.second-container .sidebar .sidebarcontainer .aboutMe p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 30px;
+}
+.second-container .sidebar .sidebarcontainer .aboutMe p.readMore {
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.second-container .sidebar .sidebarcontainer .followMe {
+  padding-top: 40px;
+  border-bottom: 1px solid black;
+}
+
+.second-container .sidebar .sidebarcontainer .followMe .imageContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 60px 0;
+}
+.second-container .sidebar .sidebarcontainer .followMe h3 {
+  font-size: var(--size4);
+  letter-spacing: var(--spacing3);
+  font-weight: 300;
+}
+
+.second-container .sidebar .sidebarcontainer .followMe .imageContainer img {
+  width: 100%;
+  aspect-ratio: 1;
+  background-size: cover;
+}
+
+.second-container .sidebar .sidebarcontainer .socials {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  border-bottom: 1px solid black;
+}
+.second-container .sidebar .sidebarcontainer .subscribe-sidebar {
+  padding: 40px 0;
+  border-bottom: 1px solid black;
+}
+.second-container .sidebar .sidebarcontainer .subscribe-sidebar h3 {
+  font-size: var(--size4);
+  letter-spacing: var(--spacing3);
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+.second-container .sidebar .sidebarcontainer .subscribe-sidebar label {
+  display: block;
+  font-weight: 300;
+}
+.second-container .sidebar .sidebarcontainer .subscribe-sidebar input {
+  display: block;
+  padding: 10px;
+  width: 100%;
+  margin: 5px 0;
+}
+
+.second-container .sidebar .sidebarcontainer .subscribe-sidebar button {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  margin: 20px 0;
+  background-color: white;
+}
+
+.second-container .sidebar .sidebarcontainer .pickOfMonth {
+  padding: 60px 0;
+}
+.second-container .sidebar .sidebarcontainer .pickOfMonth h3 {
+  font-size: var(--size4);
+  letter-spacing: var(--spacing3);
+  font-weight: 300;
+}
+.second-container .sidebar .sidebarcontainer .pickOfMonth img {
+  width: 100%;
+  border: 1px solid black;
+  margin: 60px 0;
+}
+
+.second-container .sidebar .sidebarcontainer .pickOfMonth p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 30px;
+}
+.contact {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 60px 0;
+}
+.contactContainer {
+  max-width: 1080px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact .contactContainer {
+  max-width: 1080px;
+}
+.contact .contactContainer .contactform {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.contact .contactContainer h2 {
+  font-size: var(--size5);
+  margin: 40px 0;
+}
+.contact .contactContainer .contactform {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.contact .contactContainer .contactform .name {
+  display: flex;
+  gap: 20px;
+}
+.contact .contactContainer .contactform .input-div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.contact .contactContainer .contactform .firstName,
+.contact .contactContainer .contactform .lastName {
+  width: 50%;
+  align-self: flex-start;
+}
+.contact .contactContainer .contactform input,
+.contact .contactContainer .contactform textarea {
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid black;
+  width: 100%;
+}
+.contact .contactContainer .contactform input:focus,
+.contact .contactContainer .contactform textarea:focus {
+  border-bottom: 2px solid rgb(239, 106, 128);
+}
+.contact .contactContainer .contactform label {
+  font-size: var(--size1);
+  font-weight: 300;
+}
+
+.contact .contactContainer .contactform textarea {
+  resize: none;
+}
+.contact .contactContainer .contactform button {
+  width: 200px;
+  padding: 10px 0;
+  align-self: center;
+  background-color: white;
+}
+
+.footer {
+  padding: 10px 0;
+  text-align: center;
+  background-color: gainsboro;
+}
+
+@media only screen and (max-width: 600px) {
+  :root {
+    --size1: 11px;
+    --size2: 14px;
+    --size3: 16px;
+    --size4: 18px;
+    --size5: 22px;
+    --size6: 28px;
+    --spacing1: 8px;
+    --spacing2: 6px;
+    --spacing3: 4px;
+  }
+  .mobile-nav {
+    display: flex;
+  }
+  .header {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid black;
+  }
+  .header h4 span {
+    display: block;
+  }
+  .header h1 {
+    margin-bottom: 10px;
+    order: 1;
+  }
+  .header h4 {
+    margin-bottom: 10px;
+  }
+  .navbar {
+    display: none;
+  }
+  .mainPost {
+    margin: 60px 20px;
+  }
+  .mainPost .blogTag {
+    height: 48px;
+    top: -24px;
+  }
+  .mainPost .details {
+    padding: 15px;
+  }
+  .mainPost .details .blogTitle {
+    margin: 10px 0;
+  }
+  .subscribe {
+    padding: 0 10px;
+    margin-bottom: 10px;
+  }
+  .subscribe .subscribe-inner {
+    flex-direction: column;
+    padding: 10px;
+    gap: 15px;
+  }
+  .subscribe .subscribe-inner div {
+    width: 100%;
+  }
+
+  .subscribe .subscribe-inner div button {
+    display: inline-block;
+  }
+  .subscribe .subscribe-inner div input {
+    width: 100%;
+  }
+  .second-container {
+    flex-direction: column;
+  }
+  .second-container .posts .postContainer .post {
+    height: auto;
+    flex-direction: column;
+    margin: 20px 0;
+  }
+  .second-container .posts .postContainer .post img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  .second-container .posts {
+    border-right: none;
+    border-bottom: 1px solid black;
+  }
+  .second-container
+    .posts
+    .postContainer
+    .post
+    .details
+    .title_desc
+    .blogTitle {
+    margin: 10px 0;
+  }
+  .second-container .posts .postContainer .post .details .title_desc .desc {
+    line-height: 20px;
+  }
+  .contact .contactContainer {
+    padding: 0 20px;
+  }
+  .footer {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1080px) {
+  :root {
+    --size1: 12px;
+    --size2: 16px;
+    --size3: 18px;
+    --size4: 20px;
+    --size5: 24px;
+    --size6: 30px;
+    --spacing1: 8px;
+    --spacing2: 6px;
+    --spacing3: 4px;
+  }
+  .mobile-nav {
+    display: flex;
+  }
+  .header h4 span {
+    display: block;
+  }
+  .navbar {
+    display: none;
+  }
+  .mainPost {
+    margin: 60px 20px;
+  }
+  .subscribe .subscribe-inner {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .mainPost .blogTag {
+    height: 50px;
+    top: -25px;
+  }
+  .subscribe .subscribe-inner div {
+    width: 100%;
+  }
+  .subscribe .subscribe-inner div input {
+    width: 100%;
+  }
+
+  .second-container {
+    flex-direction: column;
+  }
+  .second-container .sidebar .sidebarcontainer {
+    max-width: 600px;
+    padding: 40px;
+  }
+  .second-container .posts {
+    border-right: none;
+    border-bottom: 1px solid black;
+  }
+  .contact .contactContainer {
+    padding: 20px;
+  }
+}
